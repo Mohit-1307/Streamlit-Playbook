@@ -346,6 +346,12 @@ cd Streamlit-Playbook
 
 pip install streamlit
 
+pip install numpy
+
+pip install pandas
+
+pip install matplotlib
+
 ### Run any Streamlit example:
 
 streamlit run filename.py
