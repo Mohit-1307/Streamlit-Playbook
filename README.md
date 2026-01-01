@@ -130,7 +130,7 @@ If you’ve ever said “Streamlit is simple, but confusing” — this is for y
 
 * st.dataframe (interactive)
 
-st.data_editor
+* st.data_editor
 
 * st.table (static)
 
@@ -170,7 +170,7 @@ st.data_editor
 
 * Validation logic
 
-C* onditional feedback
+* onditional feedback
 
 * Success indicators
 
@@ -189,6 +189,7 @@ Explains:
 #### session_state1.py
 
 * Shows what happens without session state
+
 ➡️ Variables reset on every rerun.
 
 * session_state2.py & session_state3.py
@@ -335,15 +336,19 @@ Ignore rules for Python, Jupyter, virtual environments, and system files.
 
 ---
 
-## ▶️ How to Run Any Example
+## ▶️ How to Run Locally
+
+git clone https://github.com/Mohit-1307/Streamlit-Playbook.git
+
+cd Streamlit-Playbook
+
+Install dependencies:
 
 pip install streamlit
 
+Run any Streamlit example:
+
 streamlit run filename.py
-
-Example:
-
-streamlit run session_state2.py
 
 ---
 
@@ -355,11 +360,11 @@ streamlit run session_state2.py
 
 * Describes the complete folder and noteboook structure
 
-Guides learners on how to follow the learning path step-by-step
+* Guides learners on how to follow the learning path step-by-step
 
-Provides setup instructions and usage guidelines
+* Provides setup instructions and usage guidelines
 
-Acts as a quick reference for learners, contributors, and recruiters
+* Acts as a quick reference for learners, contributors, and recruiters
 
 ---
 
