@@ -256,9 +256,9 @@ Configured to ignore:
 * ML artifacts
 * Secrets and environment files
 
-📝 Repository Documentation
+## 📝 Repository Documentation
 
-README.md
+### README.md
 
 * Provides complete documentation for the Streamlit Examples Collection:
 
