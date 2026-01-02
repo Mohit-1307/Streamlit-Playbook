@@ -85,24 +85,6 @@ If you’ve ever said “Streamlit is simple, but confusing” — this is for y
 
 * Interest in building interactive data apps
 
-## 🧭 Learning Path
-
-1. text_elements.py
-
-2. data_elements.py → chart_elements.py
-
-3. simple_form.py → advanced_form.py
-
-4. session_state1.py → session_state3.py
-
-5. callbacks.py, rerun.py
-
-6. caching1.py, caching2.py
-
-7. layouts.py, fragments.py
-
-8. multi_pages_app.py
-
 ---
 
 ## 🗺️ Learning Path
