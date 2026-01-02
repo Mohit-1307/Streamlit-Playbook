@@ -104,6 +104,183 @@ If you’ve ever said “Streamlit is simple, but confusing” — this is for y
 8. multi_pages_app.py
 
 ---
+
+## 🗺️ Learning Path
+
+### 🧭 Visual Roadmap (Streamlit Fundamentals → Production-Ready Apps)
+
+📌 Follow this path sequentially to build deep intuition about Streamlit’s execution model, UI behavior, and performance patterns — not just surface-level syntax.
+
+```
+FOUNDATION — HOW STREAMLIT THINKS
+│
+├── Streamlit Execution Basics
+│   ├── Top-to-Bottom Script Execution
+│   ├── What Causes a Rerun?
+│   ├── Why Variables Reset
+│   └── Why Buttons Feel Stateless
+│
+│   📁 Files:
+│   ├── streamlit_dataflow.py
+│   └── text_elements.py
+│
+BASIC UI & CONTENT RENDERING
+│
+├── Text & Static Elements
+│   ├── Titles, Headers, Markdown
+│   ├── Code Blocks & Captions
+│   ├── Images & Dividers
+│   └── Understanding UI as Script Output
+│
+│   📁 Files:
+│   └── text_elements.py
+│
+DATA DISPLAY & VISUALIZATION
+│
+├── Data Rendering
+│   ├── st.dataframe vs st.table
+│   ├── st.data_editor
+│   ├── Metrics & JSON Display
+│   └── When UI Triggers Reruns
+│
+├── Charts & Plots
+│   ├── Native Streamlit Charts
+│   ├── Line, Bar, Area, Scatter
+│   ├── Maps
+│   └── Matplotlib Integration (st.pyplot)
+│
+│   📁 Files:
+│   ├── data_elements.py
+│   └── chart_elements.py
+│
+USER INPUT & FORMS
+│
+├── Basic Widgets
+│   ├── Text Inputs, Sliders, Selectboxes
+│   ├── Radios, Dates, Times
+│   └── Widget Default Behavior
+│
+├── Forms (Critical Concept)
+│   ├── st.form() Execution Model
+│   ├── Why Forms Don’t Rerun Immediately
+│   ├── Submit Button Semantics
+│   └── Validation & Feedback Patterns
+│
+│   📁 Files:
+│   ├── simple_form.py
+│   ├── advanced_form.py
+│   └── form_elements.py
+│
+SESSION STATE — CORE STREAMLIT SKILL
+│
+├── Stateless vs Stateful Apps
+│   ├── Variable Reset Problem
+│   ├── Session Initialization Patterns
+│   └── Persistent UI Behavior
+│
+├── Practical Session State
+│   ├── Counters & Toggles
+│   ├── Reset Logic
+│   ├── Controlled State Mutation
+│   └── Avoiding Common Pitfalls
+│
+│   📁 Files:
+│   ├── session_state1.py
+│   ├── session_state2.py
+│   └── session_state3.py
+│
+CALLBACKS & RERUN CONTROL
+│
+├── Widget Callbacks
+│   ├── on_change Mechanics
+│   ├── Session-Driven Updates
+│   └── Predictable UI Reactions
+│
+├── Explicit Reruns
+│   ├── st.rerun()
+│   ├── Immediate UI Refresh
+│   └── Controlled Execution Flow
+│
+│   📁 Files:
+│   ├── callbacks.py
+│   └── rerun.py
+│
+CACHING & PERFORMANCE
+│
+├── Data Caching
+│   ├── @st.cache_data
+│   ├── Cache Invalidation
+│   ├── TTL-Based Refresh
+│   └── Preventing Unnecessary Recomputations
+│
+├── Resource Caching
+│   ├── @st.cache_resource
+│   ├── Models & DB Connections
+│   └── Lifecycle-Aware Persistence
+│
+│   📁 Files:
+│   ├── caching1.py
+│   └── caching2.py
+│
+LAYOUTS & UI ARCHITECTURE
+│
+├── Layout Primitives
+│   ├── Sidebar, Columns, Tabs
+│   ├── Containers & Expanders
+│   ├── Placeholders (st.empty)
+│   └── Responsive UI Design
+│
+├── Fragments (Advanced)
+│   ├── @st.fragment()
+│   ├── Partial UI Rerendering
+│   ├── Modular UI Blocks
+│   └── Performance-Friendly Updates
+│
+│   📁 Files:
+│   ├── layouts.py
+│   └── fragments.py
+│
+MULTIPAGE APPLICATIONS
+│
+├── Manual Multipage Architecture
+│   ├── Sidebar Navigation
+│   ├── Function-Based Pages
+│   ├── Page-Specific State & Data
+│   └── Scaling App Structure
+│
+│   📁 Files:
+│   └── multi_pages_app.py
+│
+ADVANCED WIDGET PATTERNS
+│
+├── Dynamic & Dependent Widgets
+│   ├── Conditional Rendering
+│   ├── Dynamic Defaults
+│   ├── Widget Toggling
+│   └── Preserving User Input Across Reruns
+│
+│   📁 Files:
+│   ├── advance_widget_concepts1.py
+│   └── advance_widget_concepts2.py
+│
+PRODUCTION READINESS
+│
+├── Mental Models You’ll Master
+│   ├── Rerun-First Thinking
+│   ├── State vs Cache Decisions
+│   ├── Predictable UI Behavior
+│   └── Debugging “Why Did This Rerun?”
+│
+└── Next Steps
+    ├── Build Full Dashboards
+    ├── Connect APIs & Databases
+    ├── Deploy on Streamlit Cloud
+    └── Scale to Production Apps
+    |
+```
+
+---
+
 ## 🧩 Project Structure
 
 ### 🧱 1️⃣ Basic UI & Text Elements
@@ -338,23 +515,53 @@ Ignore rules for Python, Jupyter, virtual environments, and system files.
 
 ## ▶️ How to Run Locally
 
-git clone https://github.com/Mohit-1307/Streamlit-Playbook.git
+* Follow these steps to set up and run the Streamlit Playbook repository on your local machine
+
+### 1️⃣ Clone the Repository
+
+git clone https://github.com/Streamlit-Playbook.git
 
 cd Streamlit-Playbook
 
-### Install dependencies:
+### 2️⃣ (Optional but Recommended) Create a Virtual Environment
 
-pip install streamlit
+#### 🪟 Windows:
 
-pip install numpy
+python -m venv venv
 
-pip install pandas
+venv\Scripts\activate
 
-pip install matplotlib
+#### <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_logo.svg" height="28"/> macOS / 🐧 Linux:
 
-### Run any Streamlit example:
+python3 -m venv venv
+
+source venv/bin/activate
+
+### 3️⃣ Install Dependencies
+
+* Upgrade pip and install all required libraries.
+
+pip install --upgrade pip
+
+pip install -r requirements.txt
+
+* If requirements.txt is not present, install manually
+
+pip install streamlit numpy pandas matplotlib
+
+### 4️⃣ Run Streamlit Examples
+
+* Each concept in this repository is a standalone Streamlit script.
+
+#### Run any file using:
 
 streamlit run filename.py
+
+#### Examples:
+
+streamlit run text_elements.py
+
+📌 Open the browser URL shown in the terminal (usually http://localhost:8501).
 
 ---
 
